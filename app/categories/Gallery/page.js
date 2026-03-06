@@ -3,12 +3,12 @@
 import Image from "next/image";
 
 const galleryImages = [
-  { id: 1, src: "/marble.jpg", alt: "Marble Cake" },
-  { id: 2, src: "/Caramelcake.jpg", alt: "Caramel Cake" },
-  { id: 3, src: "/cakeproduct2.jpg", alt: "Strawberry Cake" },
-  { id: 4, src: "/burgerimage.jpg", alt: "Burger" },
-  { id: 5, src: "/pizzaSlice.jpg", alt: "Pizza" },
-  { id: 6, src: "/pizza.jpg", alt: "Regular Meal" },
+  { id: 1, src: "/burfi.jpg", alt: "Awesome Burfi" },
+  { id: 2, src: "/kajukatli.jpg", alt: "Special Food" },
+  { id: 3, src: "/ghevar.jpg", alt: "Special Ghevar" },
+  { id: 4, src: "/jalebi.jpg", alt: "Special Jalebi" },
+  { id: 5, src: "/specialpeda.jpg", alt: " SpecialPeda" },
+  { id: 6, src: "/jalebi.jpg", alt: "Special Jalebi" },
 ];
 
 export default function GalleryPage() {

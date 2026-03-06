@@ -4,7 +4,7 @@ import React from "react";
 import { FaHeart } from "react-icons/fa";
 
 const products = [
-  { id: 1, name: "Spicy Pizza", price: 149, image: "/pizza.jpg" },
+  { id: 1, name: "Special Snacky", price: 149, image: "/kachori.jpg" },
   
 ];
 
@@ -12,7 +12,7 @@ const BagsPage = () => {
   return (
     <div className="p-10">
       <h2 className="text-3xl text-left font-bold mb-6">
-   Snacks Foods ({products.length})
+   Snacky Foods ({products.length})
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">

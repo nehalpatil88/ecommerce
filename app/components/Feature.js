@@ -4,9 +4,9 @@ import Image from "next/image";
 import { FaHeart } from "react-icons/fa";
 
 const products = [
-  { id: 1, name: "Cheese Burger", price: "₹60", image: "/burgerimage.jpg" },
-  { id: 2, name: "The Chocolate Desert", price: "₹60", image: "/cake.jpg" },
-  { id: 3, name: "Special Pestry", price: "₹60", image: "/cake2.jpg" },
+  { id: 1, name: "Special Burfi", price: "₹60", image: "/burfi.jpg" },
+  { id: 2, name: "Tasty Sweet", price: "₹60", image: "/ladoo.jpg" },
+  { id: 3, name: "Special Gulab Jamun ", price: "₹60", image: "/specialgulab.jpg" },
 ];
 
 export default function Feature() {
@@ -15,7 +15,7 @@ export default function Feature() {
       {/* LEFT IMAGE */}
       <div className="relative w-full lg:w-1/2 h-[500px]">
         <Image
-          src="/foodfeature3.jpg"
+          src="/maker.jpg"
           alt="Dog walking"
           fill
           className="object-cover"

@@ -4,12 +4,12 @@ import React from "react";
 import { FaHeart } from "react-icons/fa";
 
 const products = [
-  { id: 1, name: "Special Cake ", price: 299, image: "/cake.jpg" },
-  { id: 2, name: "The Yummy Cake", price: 499, image: "/marble.jpg" },
-  { id: 3, name: "The Caramel Delicius", price: 399, image: "/Caramelcake.jpg" },
-   { id: 4, name: "The Tasty Food", price: 399, image: "/cake.jpg" },
-   { id: 5, name: "The Taste Awesome ", price: 399, image: "/pizza.jpg" },
-   { id: 5, name: "The Burger KIng", price: 399, image: "/burgerimage.jpg" },
+  { id: 1, name: "Special Kachori ", price: 299, image: "/kachori.jpg" },
+  { id: 2, name: "The Yummy ladadoo", price: 499, image: "/ladoo.jpg" },
+  { id: 3, name: "The Delicius Namkeen", price: 399, image: "/namkeen.jpg" },
+   { id: 4, name: "The Tasty Samosa", price: 399, image: "/samosa.jpg" },
+   { id: 5, name: "The Taste Awesome Pedas ", price: 399, image: "/specialpeda.jpg" },
+   { id: 5, name: "The Special Food", price: 399, image: "/specialgulab.jpg" },
   
 ];
 

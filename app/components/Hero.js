@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const images = ["/foodhome.jpg", "/foodhome2.jpg"];
+// const images = ["/hero1.jpg", "/foodhome21.jpg"];
+const images=["/nehalhome.jpg","/nehalhome3.jpg"];
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);

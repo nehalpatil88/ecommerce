@@ -3,16 +3,16 @@ import React from "react";
 import { FaHeart } from "react-icons/fa";
 
 const products = [
-  { id: 1, name: "marble Cake", price: 199, image: "/marble.jpg" },
-  { id: 2, name: "caramel Cake", price: 299, image: "/Caramelcake.jpg" },
-  { id: 3, name: "Chocolate Nuts Cake", price: 499, image: "/cakeproduct.jpg" },
+  { id: 1, name: " Yummy pedaa", price: 199, image: "/specialpeda.jpg" },
+  { id: 2, name: "The Yoummy Gulab Jamun", price: 299, image: "/specialgulab.jpg" },
+  { id: 3, name: " Deliciuse Chocolate", price: 499, image: "/chocolate.jpg" },
 ];
 
 const DispensersPage = () => {
   return (
     <div className="p-10">
      <h2 className="text-3xl text-left font-bold mb-6">
-  Waste Bag ({products.length})
+ Food ({products.length})
 </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">

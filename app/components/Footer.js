@@ -14,13 +14,12 @@ export default function Footer() {
 
           {/* Column 1: Logo & About */}
           <div>
-            <Image
-              src="/loging.jpg"
-              alt="Laurissa Logo"
-              width={150}
-              height={50}
-              className="mb-2"
-            />
+            <Link
+  href="/"
+  className="flex-shrink-0 text-3xl font-extrabold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 hover:scale-105 transition-transform"
+>
+  Gruham Foods
+</Link>
 
             <p className="text-sm leading-7 text-gray-700">
              "Indulge in Sweet Moments at Our Cake Haven! Discover freshly baked delights crafted with love and the finest ingredients. From creamy classics to irresistible new flavors, every bite is pure happiness. Celebrate life’s special moments with us and make every occasion sweeter, one slice at a time."

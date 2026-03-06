@@ -15,17 +15,21 @@ export default function HeroSection() {
       </div>
 
       {/* Video */}
-      <div className="flex justify-center px-6">
-        <div className="w-full max-w-6xl aspect-video rounded-2xl overflow-hidden shadow-lg">
-          <iframe
-            className="w-full h-full"
-            src="https://www.youtube.com/embed/uBqBHsoMd08"
-            title="Cake Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-      </div>
+      <div className="flex flex-col items-center gap-6 px-6">
+
+ 
+
+  <div className="w-full max-w-sm aspect-[9/16] rounded-2xl overflow-hidden shadow-lg">
+    <iframe
+      className="w-full h-full"
+      src="https://www.youtube.com/embed/Lx_wId3RWEM"
+      title="Cake Video 2"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  </div>
+
+</div>
 
     </section>
   );

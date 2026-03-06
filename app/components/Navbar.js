@@ -9,8 +9,8 @@ import { IoCartOutline } from "react-icons/io5";
 import { CgProfile } from "react-icons/cg";
 
 const navItems = [
-  { label: "Cakes", href: "/categories/Pestries" },
-  { label: "Fast Foods", href: "/categories/fastfood" },
+  { label: "Sweets", href: "/categories/Pestries" },
+  { label: "Special Snacky", href: "/categories/fastfood" },
   { label: "Regular", href: "/categories/Regular" },
   { label: "Gallery", href: "/categories/Gallery" },
   { label: "About", href: "/About" },
@@ -26,16 +26,12 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16">
 
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
-            <Image
-              src="/loging.jpg"
-              alt="Company Logo"
-              width={115}
-              height={55}
-              className="h-9 w-auto"
-              priority
-            />
-          </Link>
+         <Link
+  href="/"
+  className="flex-shrink-0 text-3xl font-extrabold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 hover:scale-105 transition-transform"
+>
+  Gruham Foods
+</Link>
 
           {/* Desktop Centered Menu */}
           <div className="hidden md:flex flex-1 justify-center space-x-10">

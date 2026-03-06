@@ -1,12 +1,12 @@
 import Image from "next/image";
 
 const products = [
-  {  price: 199, img: "/cakeproduct.jpg" },
-  { price: 299, img: "/cakeproduct2.jpg" },
-  { price: 499, img: "/cakeproduct3.jpg" },
-  {  price: 499, img: "/cakeproduct.jpg" },
-  {price:455,img:"/cakeproduct2.jpg"},
- {price:455,img:"/cakeproduct3.jpg"},
+  {  price: 199, img: "/kajukatli.jpg" },
+  { price: 299, img: "/chocolate.jpg" },
+  { price: 499, img: "/namkeen.jpg" },
+  {  price: 499, img: "/chakali1.jpg" },
+  {price:455,img:"/kachori.jpg"},
+ {price:455,img:"/samosa.jpg"},
 ];
 
 export default function Products() {
@@ -32,10 +32,9 @@ export default function Products() {
             <h3 className="font-semibold text-center font-bold">{p.name}</h3>
             <p className="mb-3 text-center font-bold">₹{p.price}</p>
 
-            <button className="bg-orange-500 text-white w-full py-2 rounded-lg">
-              Add to Cart
-            </button>
-
+            <button className="mt-4 border-2 text-center border-black text-black px-6 py-2 rounded-full hover:bg-black hover:text-white transition">
+                Add to cart
+              </button>
           </div>
         ))}
       </div>

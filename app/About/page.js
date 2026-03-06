@@ -7,50 +7,64 @@ export default function BlogPage() {
 
       {/* Breadcrumb */}
       <div className="max-w-6xl mx-auto pt-6 px-4 text-sm text-gray-600">
-        You are here:{" "}
+    
         <Link href="/" className="hover:underline text-gray-800">
-          Home
-        </Link>{" "}
-        / <span className="text-red-600 font-semibold">About Cake Shop</span>
+        
+        </Link>
+         <span className="text-red-600 font-semibold"></span>
       </div>
 
       {/* Title */}
       <h1 className="text-center text-5xl font-bold text-red-600 mt-6 tracking-widest">
-        ABOUT CAKE SHOP
+        ABOUT  Gruham Foods SHOP
       </h1>
 
       {/* Main Section */}
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 mt-12 px-4 pb-20">
 
         {/* Left Content */}
-        <div className="space-y-6 text-gray-700 leading-7 text-lg">
-          <p>
-            We at <strong>The Cake Shop</strong> specialize in Desserts & Cakes.
-            We believe in <strong>"Quality in our Edge"</strong>, from selecting
-            the finest ingredients across India to the final exquisite creation
-            that <strong>"Brings you smiles for sure"</strong>.
-          </p>
+       <div className="space-y-6 text-gray-700 leading-7 text-lg">
+  <p>
+    <strong>Jhama Sweets</strong>, Mumbai’s fondest Indian sweets brand, was
+    established in the 1950s by the late <strong>Mr. Jhamamal Lulla</strong>.
+    Our pillars stand strong on the hard work and eagerness of delivering
+    <strong> “never ending sweetness” </strong> put in by the various
+    generations of the Lulla family who have been taking the brand from
+    strength to strength.
+  </p>
 
-          <p>
-            Our cakes & desserts receive countless compliments and are supported
-            by a wide range of exclusive sweet creations crafted with passion.
-          </p>
+  <p>
+    Apart from our flagship store in <strong>Chembur Camp</strong> – the exact
+    location where Mr. Jhamamal Lulla first set up almost 60 years ago, we have
+    now expanded our services to <strong>9 distinct locations</strong> to help
+    serve more smiles and joy to our beloved customers.
+  </p>
 
-          <p>
-            Our theme-based creative cakes, cake pops, cupcakes and desserts for
-            parties make your celebration unique and unforgettable. We spend time
-            understanding our customers’ expectations.
-          </p>
+  <p>
+    Our journey began with Mr. Jhamamal Lulla, a post-partition refugee living
+    in Chembur Camp who set up a small shop to earn a living and support his
+    family. He was well versed in the making of mithai and began by selling
+    only two items – his much famed <strong>Gulab Jamuns</strong> and the Sindhi
+    delight – <strong>Sev Barfi</strong>.
+  </p>
 
-          <p>
-            That’s why we perfectly personalize every order to meet your needs.
-          </p>
-        </div>
+  <p>
+    It has been more than 50 years, and his legendary Gulab Jamuns and Sev
+    Barfi still continue to bring joy to customers who visit us from far and
+    wide.
+  </p>
+
+  <p>
+    Mr. Jhamamal Lulla firmly believed in providing customers with nothing but
+    the <strong>best in quality and taste</strong>, and ever since, Jhama Sweets
+    has proudly continued to live by that promise.
+  </p>
+</div>
 
         {/* Right Single Banner Image */}
         <div className="relative w-full h-[500px]">
           <Image
-            src="/foodfeature3.jpg"
+            src="/maker.jpg"
             alt=""
             fill
             className="object-cover shadow-lg"

@@ -13,7 +13,7 @@ export default function ContactPage() {
 
         <div>
           <h2 className="text-2xl font-semibold text-red-600 mb-2 text-center">
-            The Cake Shop - Periyar Nagar
+            The Gruham Foods Shop - Periyar Nagar
           </h2>
           <p className="text-center">103, Periyar Nagar,</p>
           <p className="text-center">Erode,</p>
@@ -24,7 +24,7 @@ export default function ContactPage() {
 
         <div>
           <h2 className="text-2xl font-semibold text-red-600 mb-2 text-center">
-            The Cake Shop - Kollampalayam
+            The Gruham Foods Shop - Kollampalayam
           </h2>
           <p className="text-center">A K Square 95/1 Gandhiji Street,</p>
           <p className="text-center">Karur Bypass Rd, Kollampalayam,</p>
@@ -36,7 +36,7 @@ export default function ContactPage() {
 
         <div>
           <h2 className="text-2xl font-semibold text-red-600 mb-2 text-center">
-            The Cake Shop - Perundurai Road
+            The Gruham Foods Shop - Perundurai Road
           </h2>
           <p className="text-center">G T Square, 41, Perundurai Rd</p>
           <p className="text-center">Erode.</p>
@@ -47,7 +47,7 @@ export default function ContactPage() {
 
         <div>
           <h2 className="text-2xl font-semibold text-red-600 mb-2 text-center">
-            The Cake Shop - Tiruchengode
+            The Gruham Foods Shop - Tiruchengode
           </h2>
           <p className="text-center">5/7, Kokkarayanpettai Road,</p>
           <p className="text-center">

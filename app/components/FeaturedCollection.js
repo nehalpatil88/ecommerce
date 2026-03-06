@@ -4,9 +4,9 @@ import Image from "next/image";
 import { FaHeart } from "react-icons/fa";
 
 const products = [
-  { id: 1, name: "Chocolate Roses", price: "₹60", image: "/foodfeatures1.jpg" },
-  { id: 2, name: "Caramel Cake", price: "₹60", image: "/Caramelcake.jpg" },
-  { id: 3, name: "Marable Cake", price: "₹60", image: "/marble.jpg" },
+  { id: 1, name: "Special Burfi", price: "₹60", image: "/burfi.jpg" },
+  { id: 2, name: "Tasty Sweet", price: "₹60", image: "/ladoo.jpg" },
+  { id: 3, name: "Special Gulab Jamun ", price: "₹60", image: "/specialgulab.jpg" },
 ];
 
 export default function FeaturedCollection() {
@@ -15,7 +15,7 @@ export default function FeaturedCollection() {
       {/* LEFT IMAGE */}
       <div className="relative w-full lg:w-1/2 h-[900px]">
         <Image
-          src="/foodmakes.jpg"
+          src="/maker.jpg"
           alt="cake maker lady"
           fill
           className="object-cover"
