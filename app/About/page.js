@@ -1,79 +1,63 @@
-import Image from "next/image";
-import Link from "next/link";
+import React from "react";
 
-export default function BlogPage() {
+export default function AboutPage() {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-white min-h-screen">
 
-      {/* Breadcrumb */}
-      <div className="max-w-6xl mx-auto pt-6 px-4 text-sm text-gray-600">
-    
-        <Link href="/" className="hover:underline text-gray-800">
-        
-        </Link>
-         <span className="text-red-600 font-semibold"></span>
-      </div>
+      {/* Container */}
+      <div className="max-w-6xl mx-auto px-6 py-16">
 
-      {/* Title */}
-      <h1 className="text-center text-5xl font-bold text-red-600 mt-6 tracking-widest">
-        ABOUT  Gruham Foods SHOP
-      </h1>
+        {/* Title */}
+        <h1 className="text-4xl font-bold mb-10 text-black">
+          About Us
+        </h1>
 
-      {/* Main Section */}
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 mt-12 px-4 pb-20">
+        {/* English Content */}
+        <div className="space-y-6 text-gray-800 text-lg leading-relaxed">
 
-        {/* Left Content */}
-       <div className="space-y-6 text-gray-700 leading-7 text-lg">
-  <p>
-    <strong>Jhama Sweets</strong>, Mumbai’s fondest Indian sweets brand, was
-    established in the 1950s by the late <strong>Mr. Jhamamal Lulla</strong>.
-    Our pillars stand strong on the hard work and eagerness of delivering
-    <strong> “never ending sweetness” </strong> put in by the various
-    generations of the Lulla family who have been taking the brand from
-    strength to strength.
-  </p>
+          <p>
+            Gruham is a community-driven initiative by a group of passionate
+            women from rural Maharashtra, who are committed to preserving the
+            traditional food practices that have been passed down for
+            generations.
+            <strong>
+              {" "}
+              Our range of natural and unadulterated products includes spices,
+              pickles, chutneys, and ready-to-eat snacks that offer an authentic
+              taste of Maharashtra.
+            </strong>{" "}
+            We take great care in maintaining the authenticity and purity of
+            our products, without using any synthetic or artificial additives.
+          </p>
 
-  <p>
-    Apart from our flagship store in <strong>Chembur Camp</strong> – the exact
-    location where Mr. Jhamamal Lulla first set up almost 60 years ago, we have
-    now expanded our services to <strong>9 distinct locations</strong> to help
-    serve more smiles and joy to our beloved customers.
-  </p>
+          <p className="font-semibold">
+            By supporting Gruham, you not only get high-quality products but
+            also contribute to the empowerment of rural women and the
+            preservation of traditional food practices.
+          </p>
 
-  <p>
-    Our journey began with Mr. Jhamamal Lulla, a post-partition refugee living
-    in Chembur Camp who set up a small shop to earn a living and support his
-    family. He was well versed in the making of mithai and began by selling
-    only two items – his much famed <strong>Gulab Jamuns</strong> and the Sindhi
-    delight – <strong>Sev Barfi</strong>.
-  </p>
+        </div>
 
-  <p>
-    It has been more than 50 years, and his legendary Gulab Jamuns and Sev
-    Barfi still continue to bring joy to customers who visit us from far and
-    wide.
-  </p>
+        {/* Marathi Content */}
+        <div className="mt-10 space-y-6 text-gray-800 text-lg leading-relaxed">
 
-  <p>
-    Mr. Jhamamal Lulla firmly believed in providing customers with nothing but
-    the <strong>best in quality and taste</strong>, and ever since, Jhama Sweets
-    has proudly continued to live by that promise.
-  </p>
-</div>
+          <p>
+            गृहाम हा ग्रामीण महाराष्ट्रातील खाद्यसंस्कृतीची आवड असलेल्या
+            महिलांच्या गटाचा एक समुदाय-चालित उपक्रम आहे, ज्या पिढ्यानपिढ्या
+            चालत आलेल्या पारंपरिक खाद्य पद्धतींचे जतन करण्यासाठी वचनबद्ध
+            आहेत. आमच्या नैसर्गिक आणि भेसळविरहित उत्पादनांच्या श्रेणीमध्ये
+            मसाले, लोणची, चटण्या आणि महाराष्ट्राची अस्सल चव देणारे तयार
+            स्नॅक्स यांचा समावेश आहे. आम्ही कोणत्याही कृत्रिम किंवा कृत्रिम
+            पदार्थांचा वापर न करता आमच्या उत्पादनांची सात्विकता आणि शुद्धता
+            राखण्यासाठी खूप काळजी घेतो.
+          </p>
 
-        {/* Right Single Banner Image */}
-        <div className="relative w-full h-[500px]">
-          <Image
-            src="/maker.jpg"
-            alt=""
-            fill
-            className="object-cover shadow-lg"
-          />
+          <p className="font-semibold">
+            गृहामला पाठिंबा देऊन, तुम्हाला केवळ उच्च दर्जाची उत्पादने मिळत
+            नाहीत तर ग्रामीण महिलांच्या सक्षमीकरणात आणि पारंपरिक खाद्य
+            पद्धतींचे जतन करण्यातही हातभार लागतो.
+          </p>
 
-          {/* Optional Red Label */}
-          <div className="absolute top-6 left-6 bg-red-600 text-white px-6 py-2 text-xl font-semibold shadow-md">
-            INSIDE KITCHEN
-          </div>
         </div>
 
       </div>

@@ -1,83 +1,33 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-import { FaHeart } from "react-icons/fa";
-import { useCart } from "../context/CartContext";
-import { useWishlist } from "../context/WishlistContext";
+import React, { useState } from "react";
+import { useWishlist } from "../../context/WishlistContext";
+import { useCart } from "../../context/CartContext";
 import { useRouter } from "next/navigation";
+import { FaHeart } from "react-icons/fa";
+import { IoCartOutline } from "react-icons/io5";
 
 const products = [
   {
     id: 1,
-    name: "Kharvas",
-    price: 199,
-    img: "/kharvas2.jpg",
-    sizes: ["250gm", "500gm", "1kg"],
-  },
-  {
-    id: 2,
-    name: "Special Ladoo",
-    price: 299,
-    img: "/specialladoo.jpg",
-    sizes: ["250gm", "500gm", "1kg"],
-  },
-  {
-    id: 3,
-    name: "Elaichi Shrikhand",
-    price: 499,
-    img: "/elaichishrikhand.jpg",
-    sizes: ["250gm", "500gm", "1kg"],
-  },
-  {
-    id: 4,
-    name: "Special Anarase",
-    price: 499,
-    img: "/anarase.jpg",
-    sizes: ["250gm", "500gm", "1kg"],
-  },
-  {
-    id: 5,
-    name: "Kokani Awala Candy",
-    price: 199,
-    img: "/awalacandy.jpg",
-    sizes: ["250gm", "500gm", "1kg"],
-  },
-  {
-    id: 6,
-    name: "Special Ladoo",
-    price: 299,
-    img: "/ladoo.jpg",
-    sizes: ["250gm", "500gm", "1kg"],
-  },
-  {
-    id: 7,
-    name: "Special Kachori Foods",
-    price: 499,
-    img: "/kachori.jpg",
-    sizes: ["250gm", "500gm", "1kg"],
-  },
-  {
-    id: 8,
-    name: "Snacks",
-    price: 499,
-    img: "/samosa.jpg",
-    sizes: ["250gm", "500gm", "1kg"],
+    name: "Batata Wafers",
+    price: 149,
+    image: "/wafers.jpg",
+    sizes: ["100gm", "250gm", "500gm"],
   },
 ];
 
-export default function Products() {
-  const { addToCart } = useCart();
+const BagsPage = () => {
   const { toggleWishlist, isInWishlist } = useWishlist();
+  const { addToCart } = useCart();
   const router = useRouter();
 
   const [openSizeSelector, setOpenSizeSelector] = useState(null);
   const [selectedSizes, setSelectedSizes] = useState({});
-  const [actionType, setActionType] = useState(null);
 
-  const handleOpenSizes = (productId, type) => {
+  const handleOpenSizes = (productId) => {
     setOpenSizeSelector(productId);
-    setActionType(type);
     setSelectedSizes((prev) => ({
       ...prev,
       [productId]:
@@ -93,43 +43,37 @@ export default function Products() {
     }));
   };
 
-  const handleConfirmAction = (product) => {
+  const handleConfirmAddToCart = (product) => {
     const finalSize = selectedSizes[product.id] || product.sizes[0];
 
-    const item = {
+    addToCart({
       id: product.id,
       name: product.name,
       price: product.price,
-      img: product.img,
+      img: product.image,
       quantity: 1,
       selectedSize: finalSize,
-    };
+    });
 
-    addToCart(item);
     setOpenSizeSelector(null);
-
-    if (actionType === "buy") {
-      router.push("/checkout");
-    } else {
-      router.push("/cart");
-    }
+    router.push("/cart");
   };
 
   return (
-    <section className="min-h-screen bg-[#f5f1ea] px-6 py-10 md:px-10">
-      <h2 className="mb-10 text-center text-3xl font-bold text-[#1f1f1f] md:text-4xl">
-        Our Delicious Collections ({products.length})
+    <div className="min-h-screen bg-[#f5f1ea] px-6 py-10">
+      <h2 className="mb-10 text-left text-3xl font-bold text-[#1f1f1f]">
+        Papad, Sevai ({products.length})
       </h2>
 
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {products.map((p) => {
-          const isOpen = openSizeSelector === p.id;
-          const activeSize = selectedSizes[p.id] || p.sizes[0];
-          const isFav = isInWishlist(p.id);
+        {products.map((product) => {
+          const isFav = isInWishlist(product.id);
+          const isOpen = openSizeSelector === product.id;
+          const activeSize = selectedSizes[product.id] || product.sizes[0];
 
           return (
             <div
-              key={p.id}
+              key={product.id}
               className="rounded-2xl bg-white p-4 text-center shadow-sm transition hover:shadow-md"
             >
               <div className="relative h-56 overflow-hidden rounded-xl bg-[#f3e6d3]">
@@ -137,14 +81,14 @@ export default function Products() {
                   type="button"
                   onClick={() => {
                     toggleWishlist({
-                      id: p.id,
-                      name: p.name,
-                      price: p.price,
-                      img: p.img,
+                      id: product.id,
+                      name: product.name,
+                      price: product.price,
+                      img: product.image,
                     });
                     router.push("/favourites");
                   }}
-                  className={`absolute right-3 top-3 z-10 rounded-full p-2 shadow transition ${
+                  className={`absolute top-3 right-3 z-10 rounded-full p-2 shadow transition ${
                     isFav
                       ? "bg-red-500 text-white"
                       : "bg-white text-gray-500 hover:text-red-500"
@@ -154,29 +98,29 @@ export default function Products() {
                 </button>
 
                 <Image
-                  src={p.img}
-                  alt={p.name}
+                  src={product.image}
+                  alt={product.name}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   className="object-cover"
                 />
               </div>
 
               <div className="mt-4">
                 <h3 className="line-clamp-2 text-[28px] font-semibold text-[#1f1f1f]">
-                  {p.name}
+                  {product.name}
                 </h3>
 
                 <p className="mt-2 text-lg font-bold text-[#6b7340]">
-                  ₹{p.price}
+                  ₹{product.price}
                 </p>
 
                 {!isOpen ? (
                   <button
                     type="button"
-                    onClick={() => handleOpenSizes(p.id, "cart")}
-                    className="mt-4 w-full rounded-full bg-[#5c5f2a] py-3 text-sm font-semibold text-white transition hover:bg-[#4a4d20]"
+                    onClick={() => handleOpenSizes(product.id)}
+                    className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-[#5c5f2a] py-3 text-sm font-semibold text-white transition hover:bg-[#4a4d20]"
                   >
+                    
                     Add to Cart
                   </button>
                 ) : (
@@ -186,14 +130,14 @@ export default function Products() {
                     </p>
 
                     <div className="flex flex-wrap justify-center gap-2">
-                      {p.sizes.map((size) => {
+                      {product.sizes.map((size) => {
                         const isSelected = activeSize === size;
 
                         return (
                           <button
                             key={size}
                             type="button"
-                            onClick={() => handleSizeSelect(p.id, size)}
+                            onClick={() => handleSizeSelect(product.id, size)}
                             className={`rounded-full px-4 py-2 text-sm font-medium transition ${
                               isSelected
                                 ? "bg-[#5c5f2a] text-white"
@@ -209,10 +153,7 @@ export default function Products() {
                     <div className="mt-4 flex gap-3">
                       <button
                         type="button"
-                        onClick={() => {
-                          setOpenSizeSelector(null);
-                          setActionType(null);
-                        }}
+                        onClick={() => setOpenSizeSelector(null)}
                         className="w-1/2 rounded-full border border-[#d8d1c4] bg-white px-4 py-2 text-sm font-medium text-[#333] transition hover:bg-[#f3efe8]"
                       >
                         Cancel
@@ -220,7 +161,7 @@ export default function Products() {
 
                       <button
                         type="button"
-                        onClick={() => handleConfirmAction(p)}
+                        onClick={() => handleConfirmAddToCart(product)}
                         className="w-1/2 rounded-full bg-[#5c5f2a] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#4a4d20]"
                       >
                         Confirm
@@ -233,6 +174,8 @@ export default function Products() {
           );
         })}
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default BagsPage;
